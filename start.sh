@@ -13,4 +13,4 @@ echo "$all_drives" >>"$RCLONE_CONFIG"
 
 sleep 5 # Let rclone rest, update sth
 
-rclone ${RCLONE_ARGS:+$RCLONE_ARGS} serve webdav AllDrives: --addr :8080 --vfs-cache-mode full --webdav-user ${RCLONE_USER} --webdav-pass ${RCLONE_PASS} ${RCLONE_OPT_ARGS:+$RCLONE_OPT_ARGS}
+rclone ${RCLONE_ARGS:+$RCLONE_ARGS} serve webdav AllDrives: --addr :8080 --vfs-cache-mode full --user ${RCLONE_USER} --pass ${RCLONE_PASS} ${RCLONE_OPT_ARGS:+$RCLONE_OPT_ARGS}

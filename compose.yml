@@ -6,6 +6,8 @@ services:
     ports:
       - 8080:8080
     environment:
+      RCLONE_USER: ${RCLONE_USER}
+      RCLONE_PASS: ${RCLONE_PASS}
       RCLONE_ARGS: ${RCLONE_ARGS}
       RCLONE_OPT_ARGS: ${RCLONE_OPT_ARGS}
       RCLONE_CONFIG_URL: ${RCLONE_CONFIG_URL}
