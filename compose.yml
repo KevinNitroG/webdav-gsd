@@ -1,0 +1,12 @@
+name: WebDAV-GSD
+
+services:
+  app:
+    build: .
+    ports:
+      - 8080:8080
+    environment:
+      RCLONE_ARGS: ${RCLONE_ARGS}
+      RCLONE_OPT_ARGS: ${RCLONE_OPT_ARGS}
+      RCLONE_CONFIG_URL: ${RCLONE_CONFIG_URL}
+    restart: unless-stopped
